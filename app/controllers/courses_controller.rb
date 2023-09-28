@@ -10,6 +10,9 @@ class CoursesController < ApplicationController
 
   # GET /courses/1 or /courses/1.json
   def show
+    @course = Course.friendly.find(params[:id])
+    @resumes = @course.resumes
+    @exercises = @course.exercises
   end
 
   # GET /courses/new

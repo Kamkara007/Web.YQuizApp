@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  resources :courses do
-
+  
+  resources :courses, except:[:new] do
+    resources :exercises, shallow: true
+    resources :resumes, shallow: true
   end
   get "new-course", to:"courses#new"
   devise_for :users

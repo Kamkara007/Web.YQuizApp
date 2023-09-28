@@ -9,6 +9,9 @@
     <strong class="block font-medium mb-1">Content:</strong>
     <%= course.content %>
   </p>
+
+  <%= render "courses/shared/resume" %>
+  <%= render "courses/shared/course" %>
   </div>
 
   <% if action_name != "show" %>
